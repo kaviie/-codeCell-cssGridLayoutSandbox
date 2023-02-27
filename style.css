@@ -8,5 +8,68 @@ font-family: Goldman, sans-serif;
 }
 
 body {
+    background: linear-gradient(gold,violet);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
 
+.grid-container {
+    min-width: 100vw;
+    min-height: 100vh;
+    border: 1rem solid greenyellow;
+    border-radius: 4rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1em;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.grid-item {
+    border: 1rem solid black;
+    border-radius: 4rem;
+    padding: 1em;
+}
+
+.item-1 {
+    background: linear-gradient(yellow, blue);
+    justify-self: center;
+    align-self: center;
+
+    padding: 8em;
+}
+
+.item-2 {
+    background: linear-gradient(blue, purple);
+    justify-self: center;
+    align-self: center;
+
+    padding: 8em;
+}
+
+.item-3 {
+    background: linear-gradient(purple, red);
+    justify-self: center;
+    align-self: center;
+
+    padding: 8em;
+}
+
+.item-4 {
+    background: linear-gradient(red, yellow);
+    justify-self: center;
+    align-self: center;
+
+    padding: 8em;
+}
+
+@media (max-width: 40em) {
+    .grid-container {
+        grid-template-columns: none;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
 }
